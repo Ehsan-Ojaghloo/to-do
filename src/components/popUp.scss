@@ -1,0 +1,47 @@
+@use "../themes/colors.scss" as *;
+
+.pop-up-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+
+    .pop-up {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        background-color: $black;
+        padding: 20px;
+        border-radius: 8px;
+
+        .close-icon {
+            background: none;
+            color: $white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        #task-adder {
+            width: 350px;
+            padding: 15px;
+            border: 1px solid $white;
+            border-radius: 5px;
+            color: $white;
+            font-size: 0.9rem;
+        }
+
+        .add-task-btn {
+            width: 120px;
+            padding: 10px;
+            background-color: $blue;
+            color: $white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    }
+
+}
