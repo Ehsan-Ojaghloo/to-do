@@ -1,0 +1,75 @@
+@use "./themes/colors.scss" as *;
+
+.app-con {
+
+    .task-list {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+        color: $white;
+        // height: 100dvh;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            list-style-type: none;
+            background-color: red;
+            width: 35%;
+
+            h1 {
+                background: none;
+            }
+
+            .list-items {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: black;
+                width: 100%;
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 20px;
+                    background-color: $li-black;
+                    width: 85%;
+
+                    #checkbox {}
+                }
+
+            }
+
+        }
+
+    }
+
+    .empty-bg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 100vh;
+
+        h3 {
+            font-family: sans-serif;
+            font-size: 2rem;
+            color: $white;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+        }
+
+    }
+
+}

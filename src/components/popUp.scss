@@ -1,10 +1,11 @@
 @use "../themes/colors.scss" as *;
 
 .pop-up-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
+    
+    position: absolute;
+    bottom: 80px;
+    left: 38%;
+    z-index: 1;
 
     .pop-up {
         display: flex;

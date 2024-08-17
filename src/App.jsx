@@ -17,14 +17,24 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='app-con'>
       {task && <PopUp/>}
       <AddBtn/>
-      {list.map((data)=>(
-        <div key={data.id} style={{color: 'white'}}>
-          <li>{data.title}</li>
+      {list.length !== 0 ? (list.map((data)=>(
+        <div className='task-list' key={data.id} >
+          <ul>
+            <h1> Tasks </h1>
+            <div className="list-items">
+              <li> <input type="checkbox" id='checkbox'/> {data.title}</li>
+            </div>
+          </ul>
         </div>
-      ))}
+      ))) : (
+        <div className='empty-bg'>
+          <img src="./no-task.png" alt="task" />
+          <h3>You Have No Tasks</h3>
+        </div>
+      )}
     </div>
   )
 }
