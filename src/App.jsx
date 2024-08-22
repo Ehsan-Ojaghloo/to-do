@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState, useRef } from 'react'
 import "./App.scss"
 import AddBtn from "./components/addBtn"
 import PopUp from './components/popUp'
@@ -10,6 +10,8 @@ function App() {
   const { task, setTask } = useContext(TaskContext)
 
   const [list, setList] = useState([]);
+
+  const [check , setCheck] = useState([]);
 
   useEffect(() => {
     axios.get('https://668fe602c0a7969efd9a0985.mockapi.io/users/user-task')
@@ -31,6 +33,19 @@ function App() {
     }
   }, [])
 
+  function checking(event) {
+
+    const newTask = list.map((data)=>
+      data.id === event.target.id ? { ...data, checked: !data.checked} : data
+    );
+    setList(newTask);
+
+    axios.put(`https://668fe602c0a7969efd9a0985.mockapi.io/users/user-task/${event.target.id}`, {
+      checked: event.target.checked
+    })
+    .then(res => console.log(res.data))
+  }
+
   return (
     <div className='app-con'>
       {task && <PopUp />}
@@ -40,7 +55,7 @@ function App() {
           <ul>
             <h1> Tasks </h1>
             <div className="list-items">
-              <li> <input type="checkbox" id='checkbox' /> {data.title}</li>
+              <li> <input type="checkbox" id={data.id} onChange={(event)=> checking(event)} /> {data.title}</li>
             </div>
           </ul>
         </div>
