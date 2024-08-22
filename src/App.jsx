@@ -55,7 +55,7 @@ function App() {
           <ul>
             <h1> Tasks </h1>
             <div className="list-items">
-              <li> <input type="checkbox" id={data.id} onChange={(event)=> checking(event)} /> {data.title}</li>
+              <li> <input type="checkbox" id={data.id} onChange={(event)=> checking(event)} checked={data.checked} /> {data.title}</li>
             </div>
           </ul>
         </div>
