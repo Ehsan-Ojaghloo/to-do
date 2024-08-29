@@ -57,7 +57,7 @@
                     padding-left: 10px;
                     cursor: pointer;
 
-                    span {
+                    p {
                         font-family: sans-serif;
                     }
 
@@ -91,6 +91,7 @@
                     background-color: $labels;
                     color: $labels-border;
                     border: 2px solid $labels-border;
+                    text-decoration: none;
                 }
 
                 #completed {

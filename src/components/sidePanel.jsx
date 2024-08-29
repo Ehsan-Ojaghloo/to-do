@@ -1,6 +1,8 @@
 import React from 'react'
 import "./sidePanel.scss"
 
+import { Link } from 'react-router-dom';
+
 import { FiMenu } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import { GoInbox } from "react-icons/go";
@@ -22,31 +24,33 @@ function sidePanel() {
                     <div>
                         <div id="inbox" className='page-panels'>
                             <GoInbox />
-                            <span>Inbox</span>
+                            <p>Inbox</p>
                         </div>
                         <div id="today" className='page-panels'>
-                            <FaRegStar/>
-                            <span>Today</span>
+                            <FaRegStar />
+                            <p>Today</p>
                         </div>
                     </div>
                     <div>
                         <div id="scheduled" className='page-panels'>
-                            <RiCalendarScheduleLine/>
-                            <span>Scheduled</span>
+                            <RiCalendarScheduleLine />
+                            <p>Scheduled</p>
                         </div>
                         <div id="pinboard" className='page-panels'>
-                            <MdOutlinePushPin/>
-                            <span>Pinboard</span>
+                            <MdOutlinePushPin />
+                            <p>Pinboard</p>
                         </div>
                     </div>
                     <div>
-                        <div id="labels" className='page-panels'>
-                            <FaTag/>
-                            <span>Labels</span>
-                        </div>
+                        <Link to='/labels'>
+                            <div id="labels" className='page-panels'>
+                                <FaTag />
+                                <p>Labels</p>
+                            </div>
+                        </Link>
                         <div id="completed" className='page-panels'>
-                            <CiCircleCheck/>
-                            <span>Completed</span>
+                            <CiCircleCheck />
+                            <p>Completed</p>
                         </div>
                     </div>
                 </div>

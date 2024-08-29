@@ -8,15 +8,15 @@ import axios from 'axios'
 
 function App() {
 
-  const { task, setTask } = useContext(TaskContext)
+  const { task, setTask } = useContext(TaskContext);
+  const { label, setLabel } = useContext(TaskContext);
+  const { fetch_data } = useContext(TaskContext)
+  const { list , setList } = useContext(TaskContext)
 
-  const [list, setList] = useState([]);
-
-  const [check, setCheck] = useState([]);
+  // const [check, setCheck] = useState([]);
 
   useEffect(() => {
-    axios.get('https://668fe602c0a7969efd9a0985.mockapi.io/users/user-task')
-      .then(res => setList(res.data))
+    fetch_data()
   }, [])
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function App() {
       {task && <PopUp />}
       <AddBtn />
       <div className="maped">
-        <SidePanel/>
+        <SidePanel />
         <div className="first-con">
           <div className='head-line'>
             <h1 className='head-text'> <ins>Tasks</ins> </h1>

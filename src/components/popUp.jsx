@@ -7,17 +7,28 @@ import axios from 'axios';
 function popUp() {
 
   const { task, setTask } = useContext(TaskContext);
+  const { fetch_data } = useContext(TaskContext)
+
 
   const item = useRef()
 
-  const taskAdd = () => {
+  // axios.post('https://668fe602c0a7969efd9a0985.mockapi.io/users/user-task', {
+  //   title: `${item.current.value}`,
+  // })
+  const taskAdd = async () => {
     setTask(false);
 
     if (item.current.value !== "") {
-      axios.post('https://668fe602c0a7969efd9a0985.mockapi.io/users/user-task', {
-        title: `${item.current.value}`,
-      })
-        .then(res => console.log(res.data))
+      try {
+        const res = await axios.post('https://668fe602c0a7969efd9a0985.mockapi.io/users/user-task', {
+          title: `${item.current.value}`,
+        })
+        console.log(res.data)
+        fetch_data();
+      }
+      catch(error) {
+        console.log(error)
+      }
     } else {
       alert('Please fill the form')
     }
