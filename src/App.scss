@@ -2,66 +2,89 @@
 
 .app-con {
 
-    .task-list {
-        background-color: red;
-        color: $white;
+    .maped {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // background-color: red;
+        height: 100dvh;
 
-        ul {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
-            // font-family: sans-serif;
-            // list-style-type: none;
-            // background-color: red;
-            // width: 35%;
 
-            h1 {
-                background: none;
-            }
+        .first-con {
+            width: 80%;
+            // background-color: burlywood;
+            margin-bottom: 300px;
 
-            .list-items {
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                // align-items: center;
-                // background-color: black;
-                // width: 100%;
+            .head-line {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 1000px;
+                margin-top: 80px;
+                margin-bottom: 20px;
 
-                li {
-                    // display: flex;
-                    // flex-direction: row;
-                    // justify-content: flex-start;
-                    // align-items: center;
-                    // gap: 10px;
-                    // padding: 20px;
-                    // background-color: $li-black;
-                    // width: 85%;
+                .head-text {
+                    font-family: sans-serif;
+                    color: $white;
+                    // background-color: green;
                 }
 
             }
 
-        }
+            .task-list {
+                // background-color: green;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-    }
+                ul {
 
-    .empty-bg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        font-family: sans-serif;
-        height: 100vh;
-        color: $white;
+                    li {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+                        background-color: #313131;
+                        list-style: none;
+                        border-radius: 5px;
+                        width: 380px;
+                        margin-bottom: 10px;
+                        padding: 15px;
+                        color: $white;
+                        font-family: sans-serif;
 
-        h3 {
-            font-size: 2rem;
-        }
+                        input {
+                            width: 20px;
+                            height: 20px;
+                            background-color: none;
+                            appearance: none;
+                            border-radius: 50%;
+                            border: 1px solid $white;
+                        }
 
-        p img {
-            width: 400px;
-            height: 400px;
+                        input:checked {
+                            background-color: $blue;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .empty-bg {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-family: sans-serif;
+                color: $white;
+            }
+
         }
 
     }

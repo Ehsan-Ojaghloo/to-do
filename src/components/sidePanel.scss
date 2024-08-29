@@ -1,0 +1,108 @@
+@use "../themes/colors.scss" as *;
+
+.side-nav {
+    background-color: #313131;
+    width: 20%;
+    height: 100dvh;
+
+    .inner-side-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .search-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            width: 90%;
+            // background-color: red;
+            margin-top: 20px;
+            direction: rtl;
+            
+            svg {
+                color: $white;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+        }
+
+        .pagination {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                .page-panels {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    background-color: red;
+                    width: 130px;
+                    height: 60px;
+                    border-radius: 5px;
+                    padding-left: 10px;
+                    cursor: pointer;
+
+                    span {
+                        font-family: sans-serif;
+                    }
+
+                }
+
+                #inbox {
+                    background-color: $inbox;
+                    color: $inbox-border;
+                    border: 2px solid $inbox-border;
+                }
+
+                #today {
+                    background-color: $today;
+                    color: $today-border;
+                    border: 2px solid $today-border;
+                }
+
+                #scheduled {
+                    background-color: $scheduled;
+                    color: $scheduled-border;
+                    border: 2px solid $scheduled-border;
+                }
+
+                #pinboard {
+                    background-color: $pinboard;
+                    color: $pinboard-border;
+                    border: 2px solid $pinboard-border;
+                }
+
+                #labels {
+                    background-color: $labels;
+                    color: $labels-border;
+                    border: 2px solid $labels-border;
+                }
+
+                #completed {
+                    background-color: $completed;
+                    color: $completed-border;
+                    border: 2px solid $completed-border;
+                }
+
+            }
+
+        }
+
+    }
+
+}
